@@ -89,9 +89,13 @@ router.post("/contact", (req, res) => {
     [firstname, lastname, email, phone, about, order_no, message],
     (err, result) => {
       if (err) {
-        console.log(err);
-        return res.status(500).json({ error: "DB error" });
-      }
+  console.log("REGISTER DB ERROR:", err);
+  return res.status(500).json({
+    success: false,
+    message: "Database Error",
+    error: err.message
+  });
+}
 
       res.json({ success: true, message: "Inserted successfully" });
     }
