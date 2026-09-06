@@ -247,7 +247,7 @@ const handleSubmit = async (e) => {
           <article
             style={{ background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 'var(--r)', padding: 'var(--s5)' }}>
             <h3 style={{ fontSize: 'var(--text-md)', marginBottom: 'var(--s2)' }}>What is the warranty?</h3>
-            <p style={{ color: 'var(--fg-soft)', fontSize: 'var(--text-sm)', lineHeight: 1.6 }}>Every Sprylo order ships with
+            <p style={{ color: 'var(--fg-soft)', fontSize: 'var(--text-sm)', lineHeight: 1.6 }}>Every TechBazaar order ships with
               a 2-year limited warranty in addition to the manufacturer's. Optional extended cover (3 or 5 years) can be
               added at checkout from $39.</p>
           </article>
