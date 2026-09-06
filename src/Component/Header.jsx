@@ -94,7 +94,7 @@ function Header() {
       <div className="drawer" id="drawer" aria-hidden="true">
         <div className="drawer-head">
           <NavLink to="/" className="brand">
-            <span className="brand-mark">S</span> Sprylo
+            <span className="brand-mark">⚡Tech</span>  
           </NavLink>
 
           <button className="drawer-close" aria-label="Close menu">
