@@ -16,7 +16,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const res = await axios.post("http://localhost:5000/user/contact", {
+    const res = await axios.post("https://techbazaar-1-e21b.onrender.com/user/contact", {
       firstname: firstName,
       lastname: lastName,
       email,
@@ -68,7 +68,7 @@ const handleSubmit = async (e) => {
               <div className="ic">☏</div>
               <div>
                 <div className="label">CALL US · 24/7</div>
-                <div className="value"><NavLink to="tel:+915755551234">+91 575-555-1234</NavLink> </div>
+                <div className="value"><NavLink to="tel:+919257939732">+91 9257939732</NavLink> </div>
               </div>
             </div>
             <div className="info-block">

@@ -20,7 +20,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/user/login",
+        "https://techbazaar-1-e21b.onrender.com/user/login",
         formData
       );
 

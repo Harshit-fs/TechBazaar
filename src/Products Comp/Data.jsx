@@ -14,7 +14,7 @@ function Data() {
 
   //  GET PRODUCTS
   useEffect(() => {
-    axios.get("http://localhost:5000/product/products")
+    axios.get("https://techbazaar-1-e21b.onrender.com/product/products")
       .then(res => {
         setProducts(res.data);
 
@@ -36,7 +36,7 @@ function Data() {
   //  ADD TO CART
   const addToCart = async () => {
     try {
-      await axios.post("http://localhost:5000/cart/cart", {
+      await axios.post("https://techbazaar-1-e21b.onrender.com/cart/cart", {
         user_id: 1,
         product_id: activeProduct.id,
         quantity: qty
@@ -51,7 +51,7 @@ function Data() {
 
   const addProductToCart = async (product) => {
   try {
-    await axios.post("http://localhost:5000/cart/cart", {
+    await axios.post("https://techbazaar-1-e21b.onrender.com/cart/cart", {
       user_id: 1,
       product_id: product.id,
       quantity: 1
@@ -168,7 +168,7 @@ function Data() {
               className="related-cart-btn"
               onClick={async () => {
                 try {
-                  await axios.post("http://localhost:5000/cart/cart", {
+                  await axios.post("https://techbazaar-1-e21b.onrender.com/cart/cart", {
                     user_id: 1,
                     product_id: product.id,
                     quantity: 1
@@ -188,7 +188,7 @@ function Data() {
               className="related-buy-btn"
               onClick={async () => {
                 try {
-                  await axios.post("http://localhost:5000/cart/cart", {
+                  await axios.post("https://techbazaar-1-e21b.onrender.com/cart/cart", {
                     user_id: 1,
                     product_id: product.id,
                     quantity: 1

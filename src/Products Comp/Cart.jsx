@@ -13,7 +13,7 @@ function Cart() {
   const fetchCart = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/cart/all?user_id=1"
+        "https://techbazaar-1-e21b.onrender.com/cart/all?user_id=1"
       );
 
       setCart(res.data);
@@ -27,7 +27,7 @@ function Cart() {
     try {
 
       await axios.delete(
-        "http://localhost:5000/cart/delete",
+        "https://techbazaar-1-e21b.onrender.com/cart/delete",
         {
           data: { id }
         }
@@ -47,7 +47,7 @@ function Cart() {
     try {
 
       await axios.put(
-        "http://localhost:5000/cart/update",
+        "https://techbazaar-1-e21b.onrender.com/cart/update",
         {
           id,
           quantity

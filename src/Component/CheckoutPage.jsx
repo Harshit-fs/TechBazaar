@@ -22,7 +22,7 @@ function CheckoutPage() {
   if (buyNowProduct) return;
 
   axios
-    .get(`http://localhost:5000/cart/all?user_id=1`)
+    .get(`https://techbazaar-1-e21b.onrender.com/cart/all?user_id=1`)
     .then((res) => setCartItems(res.data))
     .catch((err) => console.log(err));
 
@@ -31,7 +31,7 @@ function CheckoutPage() {
 
   const deleteItem = async (id) => {
   try {
-    await axios.delete("http://localhost:5000/cart/delete", {
+    await axios.delete("https://techbazaar-1-e21b.onrender.com/cart/delete", {
       data: { id }
     });
 
@@ -57,7 +57,7 @@ function CheckoutPage() {
  const placeOrder = async (e) => {
   e.preventDefault();
 
-  await axios.post("http://localhost:5000/cart/orders", {
+  await axios.post("https://techbazaar-1-e21b.onrender.com/cart/orders", {
     ...form,
 
     items: buyNowProduct ? [buyNowProduct] : cartItems,
@@ -136,7 +136,7 @@ function CheckoutPage() {
 
         <input name="name" placeholder="Name" onChange={handleChange} />
         <input name="phone" placeholder="Phone" onChange={handleChange} />
-        <textarea name="address" placeholder="Address" onChange={handleChange} />
+        <textarea name="address" placeholder="Address" onChange={handleChange}  />
 
         <select name="payment_method" onChange={handleChange}>
           <option value="COD">Cash on Delivery</option>

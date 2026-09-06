@@ -8,7 +8,7 @@ function Index() {
 
   useEffect(() => {
   axios
-    .get("http://localhost:5000/product/products")
+    .get("https://techbazaar-1-e21b.onrender.com/product/products")
     .then((res) => {
       setProducts(res.data);
     })

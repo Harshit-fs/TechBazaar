@@ -21,7 +21,7 @@ function AddProduct() {
   e.preventDefault();
 
   try {
-    await axios.post("http://localhost:5000/product/addproduct", form);
+    await axios.post("https://techbazaar-1-e21b.onrender.com/product/addproduct", form);
 
     alert("Product saved in database!");
 
