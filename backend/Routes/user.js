@@ -8,23 +8,41 @@ const bcrypt = require("bcryptjs");
 router.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
 
+  console.log("REGISTER BODY:", req.body);
+
   try {
     const hashPassword = await bcrypt.hash(password, 10);
 
     const sql = "INSERT INTO users(name,email,password) VALUES(?,?,?)";
 
-    db.query(sql, [name, email, hashPassword], (err) => {
-      if (err) return res.status(500).json(err);
+    db.query(sql, [name, email, hashPassword], (err, result) => {
+      if (err) {
+        console.log("REGISTER DB ERROR:", err);
+
+        return res.status(500).json({
+          success: false,
+          message: "Database Error",
+          error: err.message,
+          code: err.code
+        });
+      }
+
+      console.log("REGISTER SUCCESS:", result);
 
       res.json({
         success: true,
         message: "User Registered"
       });
-    }); 
-    
+    });
 
   } catch (error) {
-    res.status(500).json(error);
+    console.log("REGISTER ERROR:", error);
+
+    res.status(500).json({
+      success: false,
+      message: "Server Error",
+      error: error.message
+    });
   }
 });
 
